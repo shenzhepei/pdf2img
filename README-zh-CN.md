@@ -1,7 +1,7 @@
-# PDF Toolbox
+# PDF 工具箱
 
 <!-- repo-languages:start -->
-English | [简体中文](README-zh-CN.md)
+[English](README.md) | 简体中文
 <!-- repo-languages:end -->
 
 <!-- repo-badges:start -->
@@ -16,34 +16,34 @@ English | [简体中文](README-zh-CN.md)
 [![Sponsor](https://img.shields.io/github/sponsors/shenzhepei?style=flat-square&logo=githubsponsors&label=Sponsor)](https://github.com/sponsors/shenzhepei)
 <!-- repo-badges:end -->
 
-A private, browser-based PDF workspace for everyday document tasks. Convert PDF pages to PNG or JPEG, merge files in a chosen order, or split a document into one PDF per page. Files are processed locally and are never uploaded.
+一个注重隐私、完全运行在浏览器中的 PDF 工作区。支持将 PDF 页面转换为 PNG 或 JPEG、按顺序合并多个文件，以及将文档逐页拆分。文件仅在本地处理，不会上传到服务器。
 
-[Open PDF Toolbox](https://shenzhepei.github.io/pdf2img/)
+[打开 PDF 工具箱](https://shenzhepei.github.io/pdf2img/)
 
-![PDF Toolbox showing the PDF-to-images workflow](docs/preview.jpg)
+![PDF 工具箱展示 PDF 转图片工作流](docs/preview.jpg)
 
-## Features
+## 功能
 
-- Convert every PDF page to PNG or JPEG with selectable resolution and JPEG quality
-- Preview converted pages and download them together as a ZIP archive
-- Merge multiple PDFs in selection order
-- Split a PDF into one document per page and download a ZIP archive
-- Private, client-side processing with no server upload
-- Responsive English and Simplified Chinese interface
+- 将 PDF 的每一页转换为 PNG 或 JPEG，可选择清晰度与 JPEG 质量
+- 预览转换结果，并将全部图片打包为 ZIP 下载
+- 按选择顺序合并多个 PDF
+- 将 PDF 逐页拆分，并以 ZIP 打包下载
+- 全程在客户端处理，不上传文件
+- 完整适配桌面和移动端的中英文界面
 
-## Development
+## 本地开发
 
-Requires Node.js 24 and pnpm 10.33.2.
+需要 Node.js 24 和 pnpm 10.33.2。
 
     corepack enable
     pnpm install
     pnpm dev
 
-Run production and test checks with:
+运行生产构建与测试：
 
     pnpm build
     pnpm test:coverage
 
-## License
+## 许可证
 
-MIT. The original 2021 copyright notice is preserved in [LICENSE](LICENSE).
+MIT。原项目 2021 年的版权声明保留在 [LICENSE](LICENSE) 中。
