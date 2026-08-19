@@ -1,116 +1,40 @@
 {
-	"name": "pdf2img",
-	"version": "1.0.0",
-	"description": "使用JS将PDF文档转换为图片，并支持下载图片（.zip格式全部下载）",
-	"keywords": [
-		"typescript",
-		"vue",
-		"vuejs",
-		"scss",
-		"pdf",
-		"vue3"
-	],
-	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"commit": "git add .&&git-cz",
-		"changelog": "standard-version",
-		"test": "jest",
-		"coverall": "cat coverage/lcov.info | coveralls",
-		"stylelint": "stylelint 'src/**/*.{scss,vue}' --config '.stylelintrc.js' --fix"
-	},
-	"dependencies": {
-		"core-js": "^3.6.5",
-		"file-saver": "^2.0.5",
-		"jszip": "^3.7.1",
-		"tslib": "^2.3.1",
-		"vue": "^3.2.6",
-		"vue-loader": "^16.5.0",
-		"vue-router": "^4.0.11"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.15.5",
-		"@babel/plugin-proposal-decorators": "^7.13.5",
-		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
-		"@babel/plugin-proposal-optional-chaining": "^7.12.1",
-		"@babel/plugin-transform-classes": "^7.14.2",
-		"@babel/plugin-transform-runtime": "^7.12.1",
-		"@babel/preset-env": "^7.15.6",
-		"@commitlint/cli": "^9.1.2",
-		"@commitlint/config-conventional": "^13.1.0",
-		"@prettier/plugin-pug": "^1.16.5",
-		"@testing-library/jest-dom": "^5.14.1",
-		"@types/file-saver": "^2.0.3",
-		"@types/jest": "^27.0.2",
-		"@typescript-eslint/eslint-plugin": "^4.20.0",
-		"@typescript-eslint/parser": "^4.20.0",
-		"@vue/cli-plugin-babel": "~4.5.0",
-		"@vue/cli-plugin-eslint": "~4.5.0",
-		"@vue/cli-plugin-typescript": "^4.5.8",
-		"@vue/cli-service": "^4.5.7",
-		"@vue/compiler-sfc": "^3.2.6",
-		"@vue/eslint-config-prettier": "^6.0.0",
-		"@vue/eslint-config-standard": "^5.1.2",
-		"@vue/eslint-config-typescript": "^7.0.0",
-		"@vue/test-utils": "^2.0.0-rc.15",
-		"babel-eslint": "^8.1.1",
-		"babel-jest": "^27.2.2",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"commitizen": "^4.2.3",
-		"commitlint-config-cz": "^0.13.2",
-		"coveralls": "^3.1.1",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^6.7.2",
-		"eslint-plugin-flowtype": "^5.4.0",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-prettier": "^3.3.1",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-sonarjs": "^0.6.0",
-		"eslint-plugin-standard": "^5.0.0",
-		"eslint-plugin-vue": "^6.2.2",
-		"git-cz": "^4.7.6",
-		"husky": "^4.3.8",
-		"jest": "^27.2.2",
-		"lint-staged": "^11.1.2",
-		"node-sass": "^4.14.1",
-		"postcss-prefix-selector": "^1.12.0",
-		"prettier": "^2.2.1",
-		"pug": "^3.0.2",
-		"pug-plain-loader": "^1.0.0",
-		"sass-loader": "^10.0.3",
-		"standard-version": "^9.3.1",
-		"stylelint": "^13.3.2",
-		"stylelint-config-prettier": "^8.0.2",
-		"stylelint-config-recess-order": "^2.0.4",
-		"stylelint-config-standard": "^20.0.0",
-		"stylelint-scss": "^3.19.0",
-		"ts-jest": "^27.0.5",
-		"typescript": "^4.4.2",
-		"vue-jest": "^5.0.0-alpha.10",
-		"webpack-bundle-analyzer": "^3.9.0"
-	},
-	"author": "fish uncle",
-	"license": "MIT",
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged",
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-		}
-	},
-	"config": {
-		"commitizen": {
-			"path": "git-cz"
-		}
-	},
-	"standard-version": {
-		"skip": {
-			"tag": true,
-			"commit": true,
-			"bump": true
-		}
-	},
-	"lint-staged": {
-		"*.{js,ts,css,vue,scss}": "prettier  --plugin-search-dir ./node_modules --config .prettierrc --write"
-	}
+  "name": "pdf2img",
+  "private": true,
+  "version": "2.0.0",
+  "description": "A privacy-first browser PDF toolbox for converting, merging, and splitting PDF files.",
+  "homepage": "https://shenzhepei.github.io/pdf2img/",
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit -p tsconfig.app.json && vite build",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "i18next": "25.5.2",
+    "jszip": "3.10.1",
+    "lucide-react": "0.468.0",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "5.4.149",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-i18next": "15.7.3"
+  },
+  "devDependencies": {
+    "@testing-library/react": "16.1.0",
+    "@types/node": "24.0.0",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "@vitest/coverage-v8": "3.2.7",
+    "jsdom": "25.0.1",
+    "sass": "1.83.0",
+    "typescript": "5.7.2",
+    "vite": "6.0.5",
+    "vitest": "3.2.7"
+  }
 }
